@@ -1,19 +1,18 @@
 // data base connection baithane k liye file
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 // define the mongodb connection url
-const mongoURL = "mongodb://localhost:27017/hotels";
+// const mongoURL = process.env.MONGO_URL_LOCAL;
+// const mongoURL = 'mongodb+srv://ujjwalkumar98355:0SwFIM61KQINZBFA@cluster0.mosrcht.mongodb.net/';
+const mongoURL = process.env.MONGO_URL;
+
 
 mongoose.connect(mongoURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
 
-// const connectDB = async () => {
-//     try {
-//       const conn = await mongoose.connect(process.env.MONGO_URI);
-//     }catch(err){}
-//   }
 
 
 const db = mongoose.connection;
