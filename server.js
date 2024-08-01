@@ -23,7 +23,7 @@ const menuItemRoutes = require('./routes/menuItemRoutes');
 app.use('/person', personRoutes);
 app.use('/menu', menuItemRoutes);
 
-
+// chenge kr dieye
 app.listen(3002, ()=>{
     console.log("listening on port 3000");
 }); 
